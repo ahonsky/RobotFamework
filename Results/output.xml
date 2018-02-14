@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180214 11:15:22.525" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/ITRANSITION.CORP/a.honsky/Downloads/article_team_city_robot-master/tests.robot" id="s1" name="Tests">
+<test id="s1-t1" name="Auth Request Positive">
+<kw name="Login with ${VALID_NAME}, ${VALID_PASSWORD} and ${VALID_NAME}, ${VALID_PASSWORD} and check ${STATUS_OK}">
+<doc>Check status_code from request after login attempt</doc>
+<msg timestamp="20180214 11:15:22.546" level="TRACE">Arguments: [ ${base_name}='User123' | ${base_password}='Pass123' | ${check_name}='User123' | ${check_password}='Pass123' | ${status_code}='200' ]</msg>
+<kw name="Call Basic Auth">
+<arguments>
+<arg>${base_name}</arg>
+<arg>${base_password}</arg>
+<arg>${check_name}</arg>
+<arg>${check_password}</arg>
+</arguments>
+<assign>
+<var>${st_code} =</var>
+</assign>
+<msg timestamp="20180214 11:15:22.548" level="FAIL">No keyword with name 'Call Basic Auth' found.</msg>
+<status status="FAIL" endtime="20180214 11:15:22.548" starttime="20180214 11:15:22.547"></status>
+</kw>
+<status status="FAIL" endtime="20180214 11:15:22.548" starttime="20180214 11:15:22.546"></status>
+</kw>
+<doc>Check status_code from request after login attempt
+with credentials specified in Template's tags</doc>
+<status status="FAIL" endtime="20180214 11:15:22.548" critical="yes" starttime="20180214 11:15:22.545">No keyword with name 'Call Basic Auth' found.</status>
+</test>
+<doc>Test demo REST service</doc>
+<status status="FAIL" endtime="20180214 11:15:22.548" starttime="20180214 11:15:22.526"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Tests" pass="0">Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20180214 11:15:22.545" level="ERROR">Error in file '/home/ITRANSITION.CORP/a.honsky/Downloads/article_team_city_robot-master/tests.robot': Importing test library 'demo_rest.DemoREST' failed: ImportError: No module named demo_rest
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/ITRANSITION.CORP/a.honsky/.local/bin
+  /home/ITRANSITION.CORP/a.honsky/PycharmProjects/a.honsky/Task_8/library
+  /home/ITRANSITION.CORP/a.honsky/PycharmProjects/a.honsky/Task_8/resource
+  /home/ITRANSITION.CORP/a.honsky/PycharmProjects/a.honsky/Task_8/variable
+  /usr/lib/python2.7
+  /usr/lib/python2.7/plat-x86_64-linux-gnu
+  /usr/lib/python2.7/lib-tk
+  /usr/lib/python2.7/lib-old
+  /usr/lib/python2.7/lib-dynload
+  /home/ITRANSITION.CORP/a.honsky/.local/lib/python2.7/site-packages
+  /usr/local/lib/python2.7/dist-packages
+  /usr/lib/python2.7/dist-packages
+  /usr/lib/python2.7/dist-packages/ubuntu-sso-client</msg>
+</errors>
+</robot>
